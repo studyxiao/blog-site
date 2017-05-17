@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{article.title}}
+{% endblock %}
+{% block main %}
+    <div class="ui container segment">
+        <h2>{{ article.title }}</h2>
+        <a href='{{ article.question_url }}' target="_blank">原问题</a>
+        <span>|</span>
+        <a href='{{ article.answer_url }}' target="_blank">原答案</a>
+        <span>|</span>
+        <span class="ui header blue ">得票数:{{ article.answer_vote }}</span>
+        <p>
+            {{ article.answer_content | safe }}
+        </p>
+    </div>
+{% endblock %}

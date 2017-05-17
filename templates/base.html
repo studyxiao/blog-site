@@ -1,0 +1,106 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <title>{% block title %}
+
+    {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'mycollections/css/semantic.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Raleway">
+
+    <style type="text/css">
+
+        body {
+            padding-top:20px;
+            font-family: Releway;
+            background-color: rgb(245, 245, 245);
+        }
+
+        .ui.container{
+            width: 800px;
+        }
+
+        .ui.secondary.vertical.menu{
+{#            margin-top: 10px;#}
+{#            margin-left: 5%;#}
+            position: fixed;
+            right:10px;
+            left:10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="ui fixed inverted red secondary menu">
+        <div class="ui container">
+
+            <a class="item"  href="{% url 'blog:index' %}">
+                Home
+            </a>
+
+            <a class="item" href="{% url 'collections:index' %}">
+                收藏
+            </a>
+
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui icon input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+                <a class="ui item">
+                    Logout
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ui grid">
+
+        <div class="three wide column" style="position: relative;">
+            <div class="ui secondary vertical menu">
+                <a class="item" href="#">
+                    <div class="ui teal label">1</div>
+                    收藏
+                </a>
+                <a class="item" href="#">
+                    <div class="ui teal label">1</div>
+                    收藏
+                </a>
+                <a class="item" href="#">
+                    <div class="ui teal label">1</div>
+                    收藏
+                </a>
+            </div>
+        </div>
+
+        <div class="ten wide column">
+            <div class="ui basic segment">
+
+                {% block main %}
+
+                {% endblock main %}
+
+            </div>
+        </div>
+        <div class="three wide column">
+
+        </div>
+    </div>
+
+
+
+
+{#  页脚  #}
+
+    <div class="ui basic center aligned segment">
+        <p>Copyright &copy; studyxiao</p>
+        津ICP备17003214号
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+    博客
+{% endblock %}
+{% block main %}
+    <div class="ui container segment">
+        <div class="ui middle aligned divided list">
+            {% if articles %}
+                {% for article in articles %}
+                    <div class="item">
+                        <img class="ui avatar image" src="{{ article.author_img }}">
+                        <div class="content">
+                            <a href="{% url 'blog:blog_detail' article.id %}" target="_blank" class="header">{{ article.title }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

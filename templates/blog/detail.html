@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+{% block main %}
+    <div class="ui container segment">
+        <h2>{{ article.title }}</h2>
+        <span>创建时间：{{ article.created_time }}</span>
+        <span>|</span>
+        <span>修改时间：{{ article.modified_time }}</span>
+        <span>|</span>
+        <span> 作者：{{ article.author }}</span>
+        <p>
+            {{ article.content | safe }}
+        </p>
+    </div>
+{% endblock %}
