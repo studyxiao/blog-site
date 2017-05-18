@@ -14,6 +14,7 @@ def index(request):
 def blog_detail(request, pk):
     context = {}
     article = get_object_or_404(Article, pk=pk)
+    print(article.content)
     article.content = markdown.markdown(article.content,
                                         extensions=[
                                             'markdown.extensions.extra',

@@ -100,4 +100,5 @@ ENV/
 # mypy
 .mypy_cache/
 # owner
-zhihu/
+zhihu/zhihu_captcha.gif
+zhihu/zhihu_cookies

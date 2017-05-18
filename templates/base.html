@@ -7,9 +7,11 @@
     <title>{% block title %}
 
     {% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'mycollections/css/semantic.css' %}"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Raleway">
 
+    <link rel="stylesheet" href="{% static 'mycollections/css/semantic.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Raleway"/>
+    <link rel="stylesheet" href="{% static 'mycollections/css/default.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'mycollections/css/github.css' %}"/>
     <style type="text/css">
 
         body {
@@ -22,13 +24,6 @@
             width: 800px;
         }
 
-        .ui.secondary.vertical.menu{
-{#            margin-top: 10px;#}
-{#            margin-left: 5%;#}
-            position: fixed;
-            right:10px;
-            left:10px;
-        }
     </style>
 
 </head>
@@ -61,6 +56,7 @@
     </div>
 
     <div class="ui basic segment">
+
 
         {% block main %}
 

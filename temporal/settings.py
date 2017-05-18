@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mycollections.apps.MycollectionsConfig',
     'blog.apps.BlogConfig',
+    'markdown',
+    'pygments',
+    'pagedown',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +84,7 @@ DATABASES = {
         'NAME': 'temporals',  # 数据库名
         'USER': 'root',  # 用户名
         'PASSWORD': '',  # 用户密码
-        'HOST': '127.0.0.1',
+        'HOST': '101.200.54.114',
         'PORT': '3306',
     }
 }
