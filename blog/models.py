@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
+from django.utils import timezone
 
 
 class Category(models.Model):
@@ -46,7 +47,7 @@ class Article(models.Model):
         """
     title = models.CharField(max_length=100, verbose_name='题目')
     content = models.TextField(verbose_name='内容')
-    created_time = models.DateTimeField(default=datetime.now(), verbose_name='创建时间')
+    created_time = models.DateTimeField(default=timezone.now, verbose_name='创建时间')
     modified_time = models.DateTimeField(default=datetime.now, verbose_name='修改时间')
     excerpt = models.CharField(max_length=200, blank=True, verbose_name='摘要')
     category = models.ForeignKey(Category, verbose_name='分类')
