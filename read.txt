@@ -1,0 +1,3 @@
+需要修改的地方：
+1. settings.py 中的数据库（HOST\PASSWORD）,DEBUG.
+2. zhihu/zhihu.py 用户名和密码

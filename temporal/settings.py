@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'y96bpvx7-#wd8=s6b2!o81&ns9tp_@@qkc1ehx1&lmw48@*^fa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.studyxiao.cn']  #还可添加自己域名，比如 '.studyxiao.cn' .表示加www也可访问
 
@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mycollections.apps.MycollectionsConfig',
     'blog.apps.BlogConfig',
-    'markdown',
-    'pygments',
     'pagedown',
 ]
 
@@ -84,7 +82,7 @@ DATABASES = {
         'NAME': 'temporals',  # 数据库名
         'USER': 'root',  # 用户名
         'PASSWORD': '',  # 用户密码
-        'HOST': '101.200.54.114',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }

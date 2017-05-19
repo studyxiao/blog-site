@@ -102,3 +102,5 @@ ENV/
 # owner
 zhihu/zhihu_captcha.gif
 zhihu/zhihu_cookies
+mycollections/migrations/
+blog/migrations/
