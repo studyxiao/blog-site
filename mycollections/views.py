@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+
 from .models import ZhiHuCollection, ZhiHuCategory
 
 
+@login_required
 def index(request):
     context = {}
     article_list = []
@@ -14,6 +17,7 @@ def index(request):
     return render(request, 'mycollections/index.html', context)
 
 
+@login_required
 def detail(request, article_id):
     context = {}
     article = ZhiHuCollection.objects.get(id=article_id)

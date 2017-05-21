@@ -47,9 +47,20 @@
                         <i class="search link icon"></i>
                     </div>
                 </div>
-                <a class="ui item">
-                    Logout
-                </a>
+                {% if user.is_authenticated %}
+                    <a  href="{% url 'user:logout' %}" class="ui item">
+                        退出
+                    </a>
+
+                {% else %}
+{#                    <a  href="{% url 'user:register' %}" class="ui item">#}
+{#                        注册#}
+{#                    </a>#}
+                    <a  href="{% url 'user:login' %}" class="ui item">
+                        登录
+                    </a>
+                {% endif %}
+
             </div>
         </div>
 

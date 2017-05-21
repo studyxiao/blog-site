@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if registered %}
+<p>已经注册成功了</p>
+{% else %}
+<p>在这里注册</p>
+<form id="user_form" method="post" action="{% url 'user:register' %}" enctype="multipart/form-data"
+>
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <input type="submit" name="submit" value="注册"/>
+
+</form>
+{% endif %}
+</body>
+</html>

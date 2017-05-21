@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mycollections.apps.MycollectionsConfig',
+    'user.apps.UserConfig',
     'blog.apps.BlogConfig',
     'pagedown',
 ]
@@ -53,6 +54,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'temporal.urls'
+
+LOGIN_URL = '/user/login/'
 
 TEMPLATES = [
     {
@@ -126,3 +129,4 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
