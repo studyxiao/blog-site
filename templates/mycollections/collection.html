@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+    收藏
+{% endblock %}
+
+{% block main %}
+    {% for item in article_list %}
+        <div class="ui container segment">
+            <h3 class="ui centered header">{{ item.category }}</h3>
+            <div class="ui divider"></div>
+
+            <div class="ui middle aligned divided list">
+                {% for article in item.articles %}
+                    <div class="item">
+                        <div class="content">
+                            <a href="{{ article.article_url }}" target="_blank" class="header">{{ article.title }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock main %}

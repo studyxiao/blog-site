@@ -1,3 +1,4 @@
+selenium
 appdirs==1.4.3
 beautifulsoup4==4.6.0
 Django==1.10.6
